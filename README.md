@@ -31,7 +31,7 @@ loan-defaulters-analysis/
 
 Two source tables joined on `LoanID`:
 
-### `Loan_default` — Transaction-level
+### Loan_default — Transaction-level
 
 | Field | Type | Description |
 |---|---|---|
@@ -39,14 +39,14 @@ Two source tables joined on `LoanID`:
 | Age | Integer | Borrower age |
 | Income | Integer | Annual income |
 | LoanAmount | Integer | Loan disbursement amount |
-| CreditScore | Integer | Credit score (300–850) |
+| CreditScore | Integer | Credit score (300-850) |
 | MonthsEmployed | Integer | Employment tenure in months |
 | NumCreditLines | Integer | Number of active credit lines |
 | InterestRate | Float | Loan interest rate (%) |
 | LoanTerm | Integer | Loan duration (months) |
 | DTIRatio | Float | Debt-to-Income ratio |
 
-### `Borrower_Demographics` — Demographic attributes
+### Borrower_Demographics — Demographic attributes
 
 | Field | Type | Description |
 |---|---|---|
@@ -60,34 +60,34 @@ Two source tables joined on `LoanID`:
 
 ---
 
-## Dashboards & Sheets
+## Dashboards and Sheets
 
 ### Story: Loan Defaulters Analysis
 
 | Story Point | Insight |
 |---|---|
-| 1 | Ages 28–37, credit score 300, single & self-employed → **10.45% default rate** for business loans |
-| 2 | Ages 48–57, credit score 500–550, education loans → **lowest default rates** despite highest interest rates |
-| 3 | Ages 48–57, unemployed with inheritance income → **highest loan amounts** |
-| 4 | Ages 28–37, credit score 850, married & part-time → **12.05% default rate** on auto loans |
+| 1 | Ages 28-37, credit score 300, single and self-employed — 10.45% default rate for business loans |
+| 2 | Ages 48-57, credit score 500-550, education loans — lowest default rates despite highest interest rates |
+| 3 | Ages 48-57, unemployed with inheritance income — highest loan amounts |
+| 4 | Ages 28-37, credit score 850, married and part-time — 12.05% default rate on auto loans |
 
 ### Dashboard 1: Loan Vs Income Analysis
 
 | Chart | Key Insight |
 |---|---|
-| Loan Distribution by Age | Age 38–47 has highest loan volume ($1,644.4M) |
+| Loan Distribution by Age | Age 38-47 has highest loan volume ($1,644.4M) |
 | Loan Distribution by Employment | Self-employed leads at $2,124.43M |
-| Income By Education | Near-equal across all education levels (~$1,341–1,369M) |
+| Income By Education | Near-equal across all education levels (~$1,341-1,369M) |
 | Income by Employment | ~25% split across all 4 employment types |
 
 ### Dashboard 2: Defaults Vs Credit Score Analysis
 
 | Chart | Key Insight |
 |---|---|
-| Interest Rates on Credit Scores | Rates flat ~3.4–3.8% across all credit score bands |
-| Defaults by Purpose & Credit Score | Defaulters have consistently lower avg. credit scores |
-| Default By Loan Term & Marital Status | Single defaulters carry the highest loan terms |
-| Defaults by Employment & Age | Part-time 28–37 show highest default rate (8.54%) |
+| Interest Rates on Credit Scores | Rates flat ~3.4-3.8% across all credit score bands |
+| Defaults by Purpose and Credit Score | Defaulters have consistently lower avg. credit scores |
+| Default By Loan Term and Marital Status | Single defaulters carry the highest loan terms |
+| Defaults by Employment and Age | Part-time 28-37 show highest default rate (8.54%) |
 
 ---
 
@@ -95,20 +95,20 @@ Two source tables joined on `LoanID`:
 
 | Field | Logic |
 |---|---|
-| Age Groups Bin | Age binned in 10-year buckets: 18–27, 28–37, 38–47, 48–57, 58–67, 68–70 |
-| Credit Score Range | Credit Score binned in 25-point buckets (300–850) |
+| Age Groups Bin | Age binned in 10-year buckets: 18-27, 28-37, 38-47, 48-57, 58-67, 68-70 |
+| Credit Score Range | Credit Score binned in 25-point buckets (300-850) |
 | Loan_default (Count) | COUNT of records in Loan_default table |
 
 ---
 
 ## Key Findings
 
-- **Highest-risk segment:** Borrowers aged 28–37, married, part-time employed, credit score ~850 → **12.05% auto loan default rate** despite low interest rates — income instability is the driver.
-- - **Business loan risk:** Ages 28–37, credit score 300, single → **10.45% default probability** on business loans.
-  - - **Lowest default segment:** Ages 48–57, credit score 500–550, education loans — highest rates, lowest defaults.
-    - - **Employment matters:** Part-time workers aged 28–37 → highest default % (**8.54%**) across all employment types.
+- **Highest-risk segment:** Borrowers aged 28-37, married, part-time employed, credit score ~850 → 12.05% auto loan default rate despite low interest rates. Income instability is the driver.
+- - **Business loan risk:** Ages 28-37, credit score 300, single → 10.45% default probability on business loans.
+  - - **Lowest default segment:** Ages 48-57, credit score 500-550, education loans — highest rates, lowest defaults.
+    - - **Employment matters:** Part-time workers aged 28-37 → highest default % (8.54%) across all employment types.
       - - **Income is education-neutral:** Income nearly identical across Bachelor's ($1,369M), Master's ($1,346M), PhD ($1,348M), and High School ($1,342M).
-        - - **DTI is stable:** DTI hovers at ~16.5–16.75% regardless of marital status or mortgage presence.
+        - - **DTI is stable:** DTI hovers at ~16.5-16.75% regardless of marital status or mortgage presence.
           - - **Self-employed dominates volume:** $2,124.43M in loans — highest of any employment type.
            
             - ---
@@ -201,19 +201,19 @@ Two source tables joined on `LoanID`:
 
             ## Roadmap
 
-            - [ ] Add Tableau Public embed link
-            - [ ] - [ ] Export dashboard screenshots to `/screenshots`
-            - [ ] - [ ] Add `.twb` XML workbook for diff-friendly version control
-            - [ ] - [ ] Add source data files to `/data`
-            - [ ] - [ ] Publish to Tableau Public
-           
-            - [ ] ---
-           
-            - [ ] ## License
-           
-            - [ ] This project is licensed under the [MIT License](LICENSE).
-           
-            - [ ] ---
-           
-            - [ ] *Built with Tableau Desktop · Data Analysis & Visualization*
-            - [ ] 
+            **Upcoming improvements:**
+
+            - Add Tableau Public embed link
+            - - Export dashboard screenshots to /screenshots
+              - - Replace placeholder .twb with actual XML workbook export
+                - - Add source data files to /data
+                  - - Publish to Tableau Public
+                   
+                    - ---
+
+                    ## License
+
+                    This project is licensed under the [MIT License](LICENSE).
+
+                    *Built with Tableau Desktop · Data Analysis and Visualization*
+                    
