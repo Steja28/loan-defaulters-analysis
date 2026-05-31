@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- ============================================================
+     Loan Defaulters Analysis — Tableau Workbook
+     Author   : Steja28
+     Version  : Tableau Desktop 2023.x
+     Created  : 2026
+     ============================================================
+
+     PLACEHOLDER FILE — Replace this with the actual exported .twb
+     from Tableau Desktop using:
+         File → Export As Version → Save as .twb (XML)
+
+     This file is tracked in Git for diff-friendly version control.
+     The packaged .twbx (with embedded data) is excluded via .gitignore.
+
+     DATA SOURCES:
+       - Loan_default.xlsx        (Transaction-level, joined on LoanID)
+       - Borrower_Demographics.xlsx (Demographic attributes, joined on LoanID)
+
+     DASHBOARDS:
+       1. Story   : Loan Defaulters Analysis (4 story points)
+       2. Dashboard: Loan Vs Income Analysis
+       3. Dashboard: Defaults Vs Credit Score Analysis
+
+     CALCULATED FIELDS:
+       - Age Groups Bin    : IF [Age] < 28 THEN "18-27" ...
+       - Credit Score Range: INT([CreditScore] / 25) * 25
+       - Loan_default Count: COUNT([Loan_default])
+
+     KEY FINDINGS:
+       - Highest-risk: Age 28-37, married, part-time, credit 850 → 12.05% auto default
+       - Business risk: Age 28-37, credit 300, single → 10.45% default
+       - Safest: Age 48-57, credit 500-550, education loans
+       - Part-time 28-37 → 8.54% default rate (highest by employment)
+
+     HOW TO INSPECT:
+       grep -o '<worksheet name="[^"]*"' Loan_Analysis.twb
+       grep -A3 '<calculation' Loan_Analysis.twb | head -60
+
+     ============================================================ -->
+
+<workbook source-build='2023.1.0' source-platform='mac' version='18.1'
+          xmlns:user='http://www.tableausoftware.com/xml/user'>
+
+  <!-- Replace below with exported Tableau XML content -->
+  <datasources>
+    <!-- Loan_default datasource -->
+    <!-- Borrower_Demographics datasource -->
+  </datasources>
+
+  <worksheets>
+    <!-- Dashboard 1: Loan Vs Income Analysis -->
+    <!-- Dashboard 2: Defaults Vs Credit Score Analysis -->
+    <!-- Story: Loan Defaulters Analysis -->
+  </worksheets>
+
+  <dashboards>
+    <!-- Loan Vs Income Analysis -->
+    <!-- Defaults Vs Credit Score Analysis -->
+  </dashboards>
+
+  <stories>
+    <!-- Loan Defaulters Analysis Story -->
+  </stories>
+
+</workbook>
